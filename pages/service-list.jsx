@@ -40,7 +40,7 @@ const ServiceComponent = ({service, loc, handleClick, handleViewClick}) => {
     return (
         <div
             title={service}
-            className={`px-8 bg-blue-400  text-white flex flex-col gap-y-8 py-8 rounded-xl select-none `}
+            className={`px-8 bg-gradient-to-r from-blue-400 from-blue-600 text-white flex flex-col gap-y-8 py-8 rounded-xl select-none `}
         >
             <div className={`text-4xl`} title={service} id={`title`}>{service.toUpperCase()}</div>
             <div title={service} id={`description`}>{`description`}</div>
