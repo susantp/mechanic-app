@@ -26,7 +26,8 @@ const Home = () => {
     const handleQuery = (e) => {
         const {coords: {latitude, longitude}} = position
         const {value} = inputRef.current
-        router.push(`query?service=${value}&lat=${latitude}&long=${longitude}`)
+
+        value && router.push(`query?service=${value}&lat=${latitude}&long=${longitude}`)
     }
     return (
         <>
