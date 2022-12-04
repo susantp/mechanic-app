@@ -46,10 +46,10 @@ const ServiceComponent = ({service, loc, handleClick, handleViewClick}) => {
             <div title={service} id={`description`}>{`description`}</div>
             <div title={service} id={`description`}>{loc}</div>
             <div className={`flex gap-3`} title={`ping him!`} id={`distance`}>
-                <button onClick={(e) => handleClick(e, service)}
+                <button title={`Ping him!`} onClick={(e) => handleClick(e, service)}
                         className={`cursor-pointer text-2xl px-4 py-2 bg-green-600 rounded-xl`}>Ping him!
                 </button>
-                <button onClick={(e) => console.log(e, service)}
+                <button title={ `Check on him!`} onClick={(e) => console.log(e, service)}
                         className={`cursor-pointer text-2xl px-4 py-2 bg-yellow-600 rounded-xl`}>Check on him!
                 </button>
             </div>
