@@ -14,10 +14,10 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head></Head>
-                <body>
+                <body className={`dark:bg-slate-800`}>
                 <Main/>
                 <NextScript/>
-                </body>
+                </body >
             </Html>
         );
     }

@@ -34,10 +34,11 @@ const Home = () => {
             <Head>
                 <title>Gravity Services</title>
             </Head>
-            <div className={`flex justify-center items-center h-screen flex-col  gap-y-16`}>
+            <div className={`flex justify-center items-center h-screen flex-col  gap-y-16 `}>
                 <div className={`flex justify-center items-center w-full gap-y-2 gap-x-2 `}>
-                    <h1 className={`text-2xl lg:text-6xl md:text-4xl  font-semibold text-blue-400`}>Choose 100+ Services
-                        around you.</h1>
+                    <h1 className={`text-2xl lg:text-6xl md:text-4xl  font-semibold text-blue-400 dark:text-white`}>
+                        {`Choose 100+ Services around you.`}
+                    </h1>
                 </div>
 
                 <HomePageSearchComponent inputRef={inputRef} handleClick={handleQuery}
