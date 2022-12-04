@@ -2,23 +2,9 @@ import HomePageSearchComponent from "../components/home-page-search-component";
 import {useRef, useState} from "react";
 import Head from "next/head";
 import {useRouter} from "next/router";
+import {useLocation} from "../hooks/useLocation";
 
 
-const useLocation = () => {
-    const [position, setPosition] = useState({});
-    const [positionError, setPositionError] = useState({});
-    if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
-
-        window.navigator.geolocation.getCurrentPosition(
-            (position) => {
-                setPosition(position)
-            },
-            (positionError) => {
-                setPositionError(positionError)
-            })
-    }
-    return {positionError, position}
-}
 const Home = () => {
     const router = useRouter()
     const inputRef = useRef("")

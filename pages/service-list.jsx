@@ -5,8 +5,6 @@ const ServiceList = () => {
     const router = useRouter()
     const {query} = router
     const {service, loc} = query
-    const [lat, long] = loc.split(',')
-    console.log(lat, long)
     const handleServiceClick = (e) => {
         console.log(e)
     }
@@ -25,8 +23,7 @@ const ServiceList = () => {
                             .map(service =>
                                 <ServiceComponent key={service}
                                                   value={service}
-                                                  lat={lat}
-                                                  long={long}
+                                                  loc={loc}
                                                   handleClick={handleServiceClick}
                                 />
                             )
@@ -39,7 +36,8 @@ const ServiceList = () => {
 }
 export default ServiceList
 
-const ServiceComponent = ({value, lat, long, handleClick}) => {
+const ServiceComponent = ({value, loc, handleClick}) => {
+    console.log(loc)
     return (
         <div onClick={handleClick}
              title={value}
