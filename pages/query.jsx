@@ -22,7 +22,7 @@ export default Query;
 
 const SearchingProcessComponent = ({service, lat, long}) => {
     return <div className={`flex justify-center items-center h-screen flex-col gap-y-2`}>
-        <h1 className={`text-2xl md:text-4xl  lg:text-5xl `}>Searching for <span
+        <h1 className={`text-2xl md:text-4xl  lg:text-5xl dark:text-white `}>Searching for <span
             className={`text-3xl md:text-5xl  lg:text-6xl text-blue-600 font-semibold`}>{service}...</span></h1>
         <p>{`for location ${lat}, ${long}`}</p>
     </div>
